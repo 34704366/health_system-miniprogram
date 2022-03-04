@@ -1,0 +1,121 @@
+<!--index.wxml-->
+<image class="background" mode="widthFix" src="../../images/home_home.jpeg"></image>
+<view class="container">
+  <!--  -->
+  <view class="search-box row-box {{searchClass}}">
+
+    <input placeholder="搜索信息" placeholderClass="search-placeholder" bindtap="searchFocus" bindblur="searchBlur" confirm-type="search" bindinput="searchKey"></input>
+    <icon class="iconfont icon-sousuo"></icon>
+  </view>
+
+  <view class="consulting-type row-box clearfix">
+    <!-- 点击专家咨询或者快速咨询可以跳转到咨询页面（本模块暂时还没有完成） -->
+    <view>
+      <navigator url="../search/search?expertDoc">
+      <icon class="iconfont icon-zhuanjia"></icon>
+      <text>专家咨询</text>
+      </navigator>
+    </view>
+
+    <view>
+      <icon class="iconfont icon-Micon-zixun"></icon>
+      <text>快速咨询</text>
+    </view>
+  </view>
+
+  <view class="info-box">
+    <!-- 每一个title都是模块的标题 -->
+    <view class="title">
+      <text>医生信息介绍</text>
+      <navigator url="../search/search" class="more">
+        <text>更多</text>
+        <icon class="iconfont icon-fangxiangyou"></icon>
+      </navigator>
+    </view>
+    
+    <!-- 滑动栏展示医生缩略信息 -->
+    <view class="scroll-info">
+      <!-- 通过scroll-view组件来实现滑动栏，可以通过滑动栏来浏览医生的缩略信息（头像和姓名） -->
+      <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex;">
+
+        <view class="inline-box" wx:for="{{doctor_info}}">
+          <view class="abbrev-info" bindtap="selectDoctor" data-index="{{index}}">
+            <image class="small-image" src="{{item.avatar}}" mode="scaleToFill"></image>
+            <!-- <image class="small-image" src="{{doctor_info[doctor_info_index].avatar}}" mode="scaleToFill"></image> -->
+            <text>{{item.name}}</text>
+            <!-- <text>{{doctor_info[doctor_info_index].name}}</text> -->
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+
+    
+    <!-- 展示医生详细信息，默认收起状态，当用户选择某位医生的信息，页面上会展示医生的详细信息 -->
+    <view class="row-info" wx:if="{{doctor_info_index!=''}}">
+      <image class="big-image" src="{{doctor_info[doctor_info_index].avatar}}" mode="widthFix"></image>
+      <view class="col-info">
+        <view class="name">
+          {{doctor_info[doctor_info_index].name}}
+        </view>
+        <view class="gender">
+          性别：{{doctor_info[doctor_info_index].gender}}
+        </view>
+        <view class="department">
+          科室：{{doctor_info[doctor_info_index].department}}
+        </view>
+        <view class="grade">
+          职称：{{doctor_info[doctor_info_index].grade}}
+        </view>
+        <view class="job">
+          职务：{{doctor_info[doctor_info_index].job}}
+        </view>
+      </view>
+    </view>
+    <view class="title">
+      详细介绍：
+    </view>
+    <view class="content">
+      {{doctor_info[doctor_info_index].content}}
+    </view>
+    
+
+
+  </view>
+
+  <view class="info-box">
+    <!-- 每一个title都是模块的标题 -->
+    <view class="title">
+      药品信息介绍
+    <navigator url="../search/search" class="more">
+        <text>更多</text>
+        <icon class="iconfont icon-fangxiangyou"></icon>
+      </navigator>
+    </view>
+
+    <!-- 药品 -->
+    <view class="four-list-icon">
+      <view wx:for="{{department}}" wx:key="key" class="medicine-box">
+        <navigator url="../search/search?tag={{item.tag}}">
+          <icon class="iconfont icon-{{item.icon}}"></icon>
+          <text>{{item.tag}}</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+  <view class="info-box">
+  <!-- 每一个title都是模块的标题 -->
+    <view class="title">
+      医院地址查询
+    </view>
+    <view>
+      <text style="margin:5rpx 25rpx">详细地址：</text>
+      <!-- 在此模块上绑定点击事件，点击后页面自动弹出地图页面，用户可以选择搜搜附近的医院，然后前端页面会保存展示用户选择的地址 -->
+      <view class="location" bindtap="getLocation" selectable="false" space="false" decode="false">
+          {{location}} 
+      </view>
+    </view>
+  </view>
+
+ 
+</view>

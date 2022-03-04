@@ -1,0 +1,27 @@
+/* pages/news/news.wxss */
+.back-image{
+  border-radius: 10rpx;
+  box-shadow: 3px 3px 13px 3px rgba(0,0,0,0.2) ;
+  width: 35%;
+}
+.row-box {
+  justify-content: space-between;
+}
+.col-box {
+  width: 60%;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10rpx;
+  padding: 5rpx 10rpx;
+  text-align: left;
+  color: #888;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+.content {
+  margin: 20rpx 20rpx;
+}

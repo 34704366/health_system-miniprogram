@@ -1,0 +1,77 @@
+.backgroundColor {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 120rpx;
+  background-color: #7ee999;
+}
+.container {
+  padding: 10rpx 10rpx;
+  margin: 10rpx 10rpx;
+  
+}
+.container .info {
+  margin: 20rpx 5rpx;
+  padding: 20rpx 10rpx;
+  /* border: rgb(196, 189, 189) 1rpx solid; */
+  border-radius: 16rpx;
+
+  background-color: #fff;
+  /* box-shadow: 0 10rpx 50rpx 0rpx rgb(204, 202, 216); */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
+
+  
+}
+.row-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.col-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* 字体图标 */
+@font-face {
+  font-family: 'iconfont';  /* project id 906741 */
+  src: url('//at.alicdn.com/t/font_906741_fjs57q4lyma.eot');
+  src: url('//at.alicdn.com/t/font_906741_fjs57q4lyma.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_906741_fjs57q4lyma.woff') format('woff'),
+  url('//at.alicdn.com/t/font_906741_fjs57q4lyma.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_906741_fjs57q4lyma.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 50rpx;
+  font-style: normal;
+  color: currentColor;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-sousuo:before { content: "\e602"; }
+.icon-zhuanjia:before { content: "\e6a5"; }
+.icon-Micon-zixun:before { content: "\e7e2"; }
+.icon-fangxiangyou:before { content: "\e608"; }
+.icon-pifuke:before { content: "\e6bb"; }
+.icon-tuina:before { content: "\e749"; }
+.icon-guke:before { content: "\e628"; }
+.icon-erbihouke:before { content: "\e990"; }
+.icon-xiaoxi:before { content: "\e600"; }
+.icon-zongjie:before { content: "\e603"; }
+.icon-fangxiangyou:before { content: "\e608"; }
+.icon-chufang:before { content: "\e651"; }
+.icon-banben:before { content: "\e607"; }
+
+
+  /* 图标颜色 */
+.four-list-icon .color1 { background-image: linear-gradient(135deg, #FFA7E7, #EA6362) }
+.four-list-icon .color2 { background-image: linear-gradient(135deg, #17EAD9, #6078EA) }
+.four-list-icon .color3 { background-image: linear-gradient(135deg, #45E994, #23BCBB) }
+.four-list-icon .color4 { background-image: linear-gradient(135deg, #FFDEA7, #EA6362) }

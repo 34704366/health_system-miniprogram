@@ -1,0 +1,101 @@
+/* pages/chatroom/chatroom.wxss */
+page {
+  background-color: #f7f7f7;
+  --shadow-color: rgba(0, 0, 0, .15);
+}
+.container .info {
+  box-shadow: 0 2px 5px var(--shadow-color);
+}
+.container .info .avatar {
+  width: 30px;
+  border-radius: 50%; 
+  box-shadow: 0 2px 5px var(--shadow-color);
+  /* left: 20rpx;
+  position: relative; */
+  margin-left: 25rpx;
+  margin-top: 5rpx;
+}
+.container .info .row-box {
+  text-shadow: 1px 1px 1px var(--shadow-color);
+  border-bottom: 1px solid #eee;
+
+}
+.user-info {
+  display: flex;
+  flex-direction: column;
+  margin: 0rpx 30rpx;
+  justify-content: space-around;
+  font-size: 13px;
+}
+.container .info .content {
+  padding: 10rpx 10rpx;
+  /* text-align: center; */
+  /* 自动换行  */
+  word-wrap:break-word;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+
+}
+.add-button {
+  position: fixed;
+  bottom: 0rpx;
+  width: 100rpx;
+  text-align: center;
+  left: 325rpx;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.like-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100rpx;
+}
+.like-box > view {
+  text-align: center;
+  font-size: 13px;
+  /* margin: 10rpx 10rpx; */
+  height: 20px;
+  width: 15px;
+  position: relative;
+  top: 5px;
+  left: 10rpx;
+}
+
+@font-face {
+  font-family: "iconfont"; /* Project id 3217464 */
+  src: url('//at.alicdn.com/t/font_3217464_k8ggfu57qr.woff2?t=1646275751401') format('woff2'),
+       url('//at.alicdn.com/t/font_3217464_k8ggfu57qr.woff?t=1646275751401') format('woff'),
+       url('//at.alicdn.com/t/font_3217464_k8ggfu57qr.ttf?t=1646275751401') format('truetype');
+}
+
+@font-face {
+  font-family: "iconfont"; /* Project id 3217464 */
+  src: url('//at.alicdn.com/t/font_3217464_wsz44itvkzi.woff2?t=1646276465431') format('woff2'),
+       url('//at.alicdn.com/t/font_3217464_wsz44itvkzi.woff?t=1646276465431') format('woff'),
+       url('//at.alicdn.com/t/font_3217464_wsz44itvkzi.ttf?t=1646276465431') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pinglunxiao:before {
+  content: "\e8b9";
+}
+
+.icon-dianzan:before {
+  content: "\e816";
+}
+
+.icon-dianzan-copy:before {
+  content: "\e8ba";
+}

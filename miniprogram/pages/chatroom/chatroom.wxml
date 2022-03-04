@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="info" wx:for="{{user}}">
+    <view class="row-box">
+      <image class="avatar" src="{{item.avatar}}" mode="widthFix">
+      </image>
+      <view class="user-info">
+        <view class="name">
+          {{item.name}}
+        </view>
+        <view class="date">
+          {{item.date}}
+        </view>
+      </view>
+    </view>
+    <view class="content">
+      {{item.content}}
+    </view>
+    <view class="row">
+      <view class="like-box" bindtap="clickLike">
+        <icon class="iconfont icon-dianzan"></icon>
+        <view>
+          {{item.like_number}}
+        </view>
+      </view>
+      <view class="like-box" bindtap="clickComment">
+        <icon class="iconfont icon-pinglunxiao"></icon>
+        <view>
+          {{item.like_number}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <image src="../../images/add.png" mode="widthFix" class="add-button"  bindtap="addTopic"></image>
+</view>

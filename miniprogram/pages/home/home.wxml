@@ -1,0 +1,77 @@
+<!--pages/home/home.wxml-->
+<view class="backgroundColor"></view>
+<!--index.wxml-->
+<view class="container">
+  <!-- 每一个样式为info的view都是一个白色底的信息框 -->
+  <view class="info">
+    <view>
+      <view class="row-box">
+        <!-- 展示用户的信息 -->
+        <image src="{{avatarUrl}}" mode="widthFix" class="avatar"></image>
+        <view class="col-box">
+          <text class="nickName">{{nickName}}</text>
+          <!-- 通过从后台获取的userInfo信息中的gender字段来判断用户性别展示在前端页面上 -->
+          <view wx:if="{{userInfo.gender == 0}}">
+            <!-- <image src="../../images/home/man.png" mode="widthFix" class="icon"></image> -->
+            <text class="gender">男士</text>
+          </view>
+          <view wx:elif="userInfo.gender == 1">
+            <text class="gender">女士</text>
+          </view>
+        </view>
+
+        <!-- 通过一个默认为false的标志位来判断用户是否登录过，如果用户没有登录，要展示登录按钮提醒用户登录 -->
+        <view wx:if="{{!loginFlag}}" class="login-button">
+          <button bindtap="userLogin" type="primary" size="mini" plain="true">登录</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="info">
+    <view class="row-box">
+      <!-- 点击跳转到正在进行中的咨询页面 -->
+      <view bindtap="navgiate" class="abbrev-info">
+        <image src="../../images/home/preconsult.png" mode="widthFix" class="img"></image>
+        <text>待咨询</text>
+      </view>
+      <!-- 点击查看历史上咨询过的信息 -->
+      <view bindtap="navgiate" class="abbrev-info">
+        <!-- <icon class="iconfont icon-xiaoxi color5"></icon> -->
+        <image src="../../images/home/consult.png" mode="widthFix" class="img"></image>
+        <text>已完成</text>
+      </view>
+    </view>
+  </view>
+  <view class="info">
+    <view class="row-list">
+
+      <view>
+        <!-- 点击查看用户发过的帖子 -->
+        <navigator url='../upload/page/page'>
+          <icon class="iconfont icon-zongjie"></icon>
+          <text>我的帖子</text>
+          <icon class="iconfont icon-fangxiangyou"></icon>
+        </navigator>
+      </view>
+
+      <view>
+        <!-- 查看咨询结果 -->
+        <navigator url='../upload/page/page'>
+          <icon class="iconfont icon-chufang"></icon>
+          <text>咨询结果</text>
+          <icon class="iconfont icon-fangxiangyou"></icon>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class="info">
+    <view class="row-list">
+      <view bindtap="printVersion">
+        <icon class="iconfont icon-banben"></icon>
+        <text>版本号: {{version}}</text>
+        <text style="float: right; margin-top: 20rpx; font-size:12px">（测试版 张永祺毕业设计）</text>
+      </view>
+    </view>
+  </view>
+</view>

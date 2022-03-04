@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="info" wx:for="{{news}}">
+    <view class="row-box">
+      <!-- 分别展示养生推文的图片，标题，作者以及日期 -->
+      <image src="{{item.image}}" class="back-image" mode="widthFix"></image>
+      <view class="col-box">
+        <view class="title">
+          {{item.title}}
+        </view>
+        <view class="title">
+          {{item.author}}
+        </view>
+      </view>
+    </view>
+    <view class="content">
+      {{item.content}}
+    </view>
+    <view class="title">
+      {{item.date}}
+    </view>
+    
+  </view>
+</view>

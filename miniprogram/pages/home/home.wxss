@@ -1,0 +1,76 @@
+/* pages/home/home.wxss */
+.container .info .avatar{
+  width: 75px;
+  border-radius: 50%;
+  box-shadow: 10rpx 10rpx 20rpx 5rpx rgb(209, 216, 218);
+  /* left: 20rpx;
+  position: relative; */
+  margin-left: 25rpx;
+}
+.container .info .nickName{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10rpx 30rpx;
+}
+.container .info .gender{
+  font-size: 16px;
+  font-weight: 400;
+  margin: 10rpx 30rpx;
+}
+.container .info .icon{
+  width: 30px;
+  /* border-radius: %; */
+  box-shadow: 10rpx 10rpx 20rpx 5rpx rgb(209, 216, 218);
+}
+
+.login-button{
+  /* vertical-align: middle; */
+  position: relative;
+  top: 20rpx;
+  left: 50rpx;
+}
+.abbrev-info {
+
+  display: flex;
+  flex-direction: column;
+  width: 130rpx;
+  margin: 10rpx 0rpx;
+  padding: 0rpx 20rpx;
+  text-align: center;
+  
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+  border-right: 1px solid #eee;
+
+}
+.abbrev-info .img {
+  width: 100rpx;
+  height: 100rpx;
+  /* box-shadow: 1px 1px 13px 0px rgba(0,0,0,0.2) ; */
+  margin-left: 12%;
+  
+}
+
+.row-list {
+  margin-top: 0px;
+  padding: 5rpx 0;
+  color: #777;
+  font-size: 30rpx;
+}
+.row-list > view {
+  margin: 0 10rpx;
+  padding: 10rpx;
+  border-bottom: 1px solid #eee;
+}
+.row-list > view icon {
+  margin-right: 10rpx;
+  color: rgb(18,150,219);
+  vertical-align: middle;
+}
+.row-list > view:last-child {
+  border-bottom: none;
+}
+.row-list .icon-fangxiangyou {
+  float: right;
+  color: #ccc;
+  font-size: 30rpx;
+}
