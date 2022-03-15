@@ -71,6 +71,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    const item = this.data.news[0];
+    // for (const key in item) {
+      // if (Object.hasOwnProperty.call(item, key)) {
+      //   const element = item[key];
+      //   console.log(element)
+      // }
+    // }
+    const list = Object.getOwnPropertyNames(item);
+    console.log(list)
+    
   },
 })
