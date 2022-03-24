@@ -31,7 +31,7 @@ Page(check_login.checkLogin({
         loginFlag: true
       })
     };
-
+    
   },
   getUserProfile() {
     // 使用微信封装好的函数 wx.getUserProfile()来让用户登录

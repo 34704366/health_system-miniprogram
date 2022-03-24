@@ -106,6 +106,9 @@ page {
   border-radius: 10rpx;
   box-shadow: 0 2px 5px var(--shadow-color);
   margin-bottom: 20rpx;
+
+  /* 定义info-box为一个BFC */
+  overflow: hidden;
 }
 .info-box .content{
   margin: 20rpx 20rpx;

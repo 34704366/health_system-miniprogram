@@ -22,7 +22,8 @@
   /* box-shadow: 0 10rpx 50rpx 0rpx rgb(204, 202, 216); */
   box-shadow: 0 2px 5px rgba(0, 0, 0, .15);
 
-  
+  /* 定义每一个info为一个BFC */
+  overflow: hidden;
 }
 .row-box {
   display: flex;
