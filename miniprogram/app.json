@@ -4,7 +4,9 @@
     "pages/search/search",
     "pages/chatroom/chatroom",
     "pages/home/home",
-    "pages/news/news"
+    "pages/news/news",
+    "pages/healthProducts/healthProducts",
+    "pages/category/category"
   ],
   "window": {
     "backgroundColor": "#fff",

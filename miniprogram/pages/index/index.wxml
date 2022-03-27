@@ -26,7 +26,7 @@
   <view class="info-box">
     <!-- 每一个title都是模块的标题 -->
     <view class="title">
-      <text>医生信息介绍</text>
+      <text>养生专家介绍</text>
       <navigator url="../search/search" class="more">
         <text>更多</text>
         <icon class="iconfont icon-fangxiangyou"></icon>
@@ -85,17 +85,17 @@
   <view class="info-box">
     <!-- 每一个title都是模块的标题 -->
     <view class="title">
-      药品信息介绍
-    <navigator url="../search/search" class="more">
+      养生保健品
+    <navigator url="../category/category" class="more">
         <text>更多</text>
         <icon class="iconfont icon-fangxiangyou"></icon>
       </navigator>
     </view>
 
-    <!-- 药品 -->
+    <!-- 养生保健品 -->
     <view class="four-list-icon">
       <view wx:for="{{department}}" wx:key="key" class="medicine-box">
-        <navigator url="../search/search?tag={{item.tag}}">
+        <navigator url="../healthProducts/healthProducts?tag={{item.tag}}">
           <icon class="iconfont icon-{{item.icon}}"></icon>
           <text>{{item.tag}}</text>
         </navigator>
