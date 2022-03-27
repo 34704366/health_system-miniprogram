@@ -1,0 +1,3 @@
+<!--pages/healthProducts/healthProducts.wxml-->
+<text>pages/healthProducts/healthProducts.wxml</text>
+<view>{{tag}}</view>

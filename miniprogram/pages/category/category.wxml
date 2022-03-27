@@ -1,0 +1,28 @@
+
+<view class="container">
+  <view class="nav_left">
+    <view wx:for="{{navList}}">
+      <view class="nav_left_items {{curIndex == index ? 'active' : ''}}" bindtap="switchLeftTab" data-index="{{index}}" data-id="{{item.id}}">
+        {{item}}
+      </view>
+    </view>
+  </view>
+
+  <view class="nav_right">
+    <view class="nav_right_items" wx:for="{{itemList[curIndex]}}">
+      <navigator url="../healthProducts/healthProducts">
+        <view>
+          <block wx:if="{{item.image}}">
+            <image src="{{item.image}}"></image>
+          </block>
+          <block wx:else>
+            <image src="https://img0.baidu.com/it/u=1654078919,3119962037&fm=253&fmt=auto&app=138&f=JPEG?w=696&h=500"></image>
+          </block>
+        </view>
+        <view wx:if="{{item.title}}">
+          <text>{{item.title}}</text>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
