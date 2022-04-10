@@ -1,3 +1,27 @@
-<!--pages/healthProducts/healthProducts.wxml-->
-<text>pages/healthProducts/healthProducts.wxml</text>
-<view>{{tag}}</view>
+<view class="container">
+
+  <view class="search-box {{searchClass}}">
+
+  <input placeholder="搜索信息" placeholderClass="search-placeholder" bindtap="searchFocus" bindblur="searchBlur" confirm-type="search" bindconfirm="search" bindinput="searchInput"></input>
+  <icon class="iconfont icon-sousuo" bindtap="search"></icon>
+  </view>
+
+  <view class="info">
+    {{tag}}
+  </view>
+  <view wx:if="{{products[0]}}">
+    <view class="title">
+      {{products[0].title}}
+    </view>
+    <view class="info" wx:for="{{products[0].products}}">
+      <view class="content" wx:for="{{item.data}}">
+        {{index}}:{{item}}
+      </view>
+      <image src="{{item.image}}" alt="" />
+    </view>
+  </view>
+  <view wx:else>
+    抱歉，您搜索的内容暂时还没有收录
+  <image src="https://img0.baidu.com/it/u=766278791,3529923002&fm=253&fmt=auto&app=138&f=GIF?w=111&h=123 "></image>
+  </view>
+</view>

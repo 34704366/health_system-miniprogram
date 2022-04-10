@@ -1,1 +1,37 @@
 /* pages/healthProducts/healthProducts.wxss */
+/* 搜索栏 */
+.search-box {
+  width: 90vw;
+  height: 80rpx;
+  margin: 0 2.5vw;
+  padding: 0;
+  background-color: rgb(243, 241, 241);
+  transition: .25s;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.search-placeholder {
+  color: rgb(163, 161, 161);
+}
+.search-box input {
+  height: 70rpx;
+  padding: 0 40px 0 .5em;
+  color: #555;
+}
+.search-box .icon-sousuo {
+  top: 0;
+  right: 0;
+  padding: 0 25rpx;
+  line-height: 70rpx;
+  font-size: 40rpx;
+  color: #888;
+}
+
+/* 搜索栏聚焦 */
+.inputFocus {
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px 1600px rgba(0, 0, 0, .2);
+}

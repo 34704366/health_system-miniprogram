@@ -10,7 +10,7 @@
 
   <view class="nav_right">
     <view class="nav_right_items" wx:for="{{itemList[curIndex]}}">
-      <navigator url="../healthProducts/healthProducts">
+      <navigator url="../healthProducts/healthProducts?tag={{item.title}}">
         <view>
           <block wx:if="{{item.image}}">
             <image src="{{item.image}}"></image>

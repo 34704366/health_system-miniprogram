@@ -14,6 +14,8 @@ Page(check_login.checkLogin({
 
     searchClass: "",
 
+    searchKey: '',
+
     doctor_info: [],
     doctor_info_index: "",
 
@@ -74,6 +76,26 @@ Page(check_login.checkLogin({
       searchClass: ""
     })
   },
+
+  // 获取用户输入的内容
+  searchInput(e) {
+    this.setData({
+      searchKey: e.detail.value,
+    });
+  },
+
+  // 搜索事件
+  search(e) {
+    wx.navigateTo({
+      url: '../healthProducts/healthProducts?tag=' + this.data.searchKey,
+      success: (result) => {},
+      fail: (res) => {},
+      complete: (res) => {
+        console.log(res)
+      },
+    })
+  },
+
   /**
    * 用户点击医生缩略信息的回调函数
    */
@@ -101,5 +123,21 @@ Page(check_login.checkLogin({
         complete: () => {}
     });
       
-},
+  },
+  consult() {
+    console.log("consult");
+  },
+  handleContact() {
+    console.log('handleContact')
+    wx.cloud.callFunction({
+      name: 'autoReply_text'
+    }).then(res => {
+      console.log(res);
+    }).catch(err => {
+      console.log(err);
+    })
+  },
+
+
+
 }))

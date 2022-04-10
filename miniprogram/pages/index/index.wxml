@@ -4,22 +4,19 @@
   <!--  -->
   <view class="search-box row-box {{searchClass}}">
 
-    <input placeholder="搜索信息" placeholderClass="search-placeholder" bindtap="searchFocus" bindblur="searchBlur" confirm-type="search" bindinput="searchKey"></input>
-    <icon class="iconfont icon-sousuo"></icon>
+    <input placeholder="搜索信息" placeholderClass="search-placeholder" bindtap="searchFocus" bindblur="searchBlur" confirm-type="search" bindconfirm="search" bindinput="searchInput"></input>
+    <icon class="iconfont icon-sousuo" bindtap="search"></icon>
   </view>
 
   <view class="consulting-type row-box clearfix">
-    <!-- 点击专家咨询或者快速咨询可以跳转到咨询页面（本模块暂时还没有完成） -->
     <view>
-      <navigator url="../search/search?expertDoc">
-      <icon class="iconfont icon-zhuanjia"></icon>
-      <text>专家咨询</text>
-      </navigator>
-    </view>
+      <!-- <icon class="iconfont icon-Micon-zixun"></icon>
+      <text>快速咨询</text> -->
+      <button bindtap="consult" bindcontact="handleContact" open-type="contact">
+          <icon class="iconfont icon-Micon-zixun"></icon>
+            专家咨询
 
-    <view>
-      <icon class="iconfont icon-Micon-zixun"></icon>
-      <text>快速咨询</text>
+      </button>
     </view>
   </view>
 
@@ -68,6 +65,9 @@
         </view>
         <view class="job">
           职务：{{doctor_info[doctor_info_index].job}}
+        </view>
+        <view class="phone">
+          联系方式：{{doctor_info[doctor_info_index].phone}}
         </view>
       </view>
     </view>
