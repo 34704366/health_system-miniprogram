@@ -5,6 +5,7 @@ node_modules/
 project.private.config.json
 miniprogram_npm
 
+
 # editor
 .vscode
 .idea
